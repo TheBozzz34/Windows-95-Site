@@ -7,9 +7,12 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="icon" href="assets/icons/earthconnections.ico" type="image/x-icon">
     <meta content="An browser based Windows 95 style website" property="og:title">
-    <meta content="win.necrozma.xyz is a website styled with the clasic windows 95 theme, it is built with only vanilla js, css, and html. No dependencies or external resources are used." property="og:description">
+    <meta
+        content="win.necrozma.xyz is a website styled with the clasic windows 95 theme, it is built with only vanilla js, css, and html. No dependencies or external resources are used."
+        property="og:description">
     <meta content="win.necrozma.xyz" property="og:site_name">
     <meta content='https://www.techspot.com/images2/news/bigimage/2018/08/2018-08-23-image-20.jpg' property='og:image'>
+
 </head>
 
 <body>
@@ -22,23 +25,23 @@
     <div class="ms95Desktop">
 
         <div class="popup-container">
-        <div class="win98popup shadow draggable-element" data-draggable="true">
-            <div class="bar">
-                <p>System message</p>
-                <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="7px" viewBox="0 0 8 7" fill-rule="evenodd" 
-                        stroke-linejoin="round" stroke-miterlimit="2">
-                        <path
-                            d="M1 6V5h1V4h1V3h2v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1zm0-4V1H0V0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H2V2H1z" />
-                    </svg>
-                </button>
-            </div>
-            <section>
-                <p>This page is under contruction</p>
-                <p>View Letter.txt for more info.</p>
-            </section>
-            <div class="buttons">
-                <!--
+            <div class="win98popup shadow draggable-element" data-draggable="true">
+                <div class="bar">
+                    <p>System message</p>
+                    <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="7px" viewBox="0 0 8 7"
+                            fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                            <path
+                                d="M1 6V5h1V4h1V3h2v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1zm0-4V1H0V0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H2V2H1z" />
+                        </svg>
+                    </button>
+                </div>
+                <section>
+                    <p>This page is under contruction</p>
+                    <p>View Letter.txt for more info.</p>
+                </section>
+                <div class="buttons">
+                    <!--
                 <button class="shadow"><img
                         src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
                         width="66.9" height="15">
@@ -50,37 +53,72 @@
                     <p><u>N</u>o</p>
                 </button>
             -->
-                <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';"><img
-                        src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
-                        width="66.9" height="15"
-                        >
-                    <p>OK</p>
-                    
-                </button>
+                    <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';"><img
+                            src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
+                            width="66.9" height="15">
+                        <p>OK</p>
+
+                    </button>
+                </div>
             </div>
         </div>
+
+        <div class="player draggable-element" data-draggable="true">
+            <audio id="player-audio" src="assets/music/file_example_MP3_2MG.mp3"></audio>
+            <div class="player-titlebar">
+                <span class="player-title">TOOL, The POT.mp3</span>
+                <div class="player-buttons">
+                    <button class="player-minimize">_</button>
+                    <button class="player-maximize">&#9633;</button>
+                    <button class="player-close">X</button>
+                </div>
+            </div>
+            <div class="player-content">
+                <div class="player-cover">
+                    <img draggable="false" src="assets/images/10000Days.jpg" alt="Cover" class="player-cover-image">
+                </div>
+                <div class="player-info">
+                    <p class="player-info-title">The Pot</p>
+                    <p class="player-info-artist">TOOL</p>
+                    <p class="player-info-album">10,000 Days</p>
+                </div>
+
+                <div class="player-controls">
+                    <button class="player-controls-prev"><img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABj0lEQVR4nO2ZvS8EURRHz8ZXKMhKJAqFBIVCp6GkW/W2yv0XRDQKhUah1CqFTkWBRqFT0FFQERIh4iMYmeROMpb3Zmf3vWTcvNPOfeeXmcy8uXMHAoFAIBAoNl3Ayj9wWpkCzoCIYjuNdAOrwIcERgV1WpkBLiTo3VHorAenkV5gHfiUkFNgssXQPg9OKxXgSuQvwDLQKceaDa14cBopAxsp8TEwXleTN7TswWmlCtyI8BlYANr+qMsTWgVuHTuNDALbKdkRMGapbyQ0du44dmZesTuRPAA1oJSxJis0dt47dhoZBvZSgl1giMYwhcbOfcdOIyW5Qo+yMH4m5slHfWjifHLotDICHKQWbQED5CcdOgocOnYaaQcWZe+Oi6+BOZonCV0CXh07jUwAJ1L0BWwC/bRGEurD+YsO2bPfpOBS+hsXRB6dP5gGzuVA3FmuAT24w4czUn0iam4tVQ+7uu1X1QtRXYuiqmlU18ar+7BS9amrbvigahykbkCnamSqboit6reCuh89gUAgENDNN9BOQmyV8/eFAAAAAElFTkSuQmCC"></button>
+                    <button class="player-controls-play">▶</button>
+                    <button class="player-controls-next"><img  draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnElEQVR4nO2ZsUtCQRzHP5IQRIgFgUOBIAUFbi1FU43SUOC/0NoY0erQ0tDY2hiNNTRFDQ1tDUZLU1RLRARWWGkc3MEjzHe+d6bv+H1ARN/9Pl996Lu73wNBEARBcEcFGEyAM5QmUAXm6G+nVah6NIA9YLhPndahdf18Cyx1wbkY02kdWgQuA2dyHxjtI6d1qCINrAM1/d4jsOrY+QCsRHB2FGooAKeBYwfAWI+dkUIVKWANeNXHn/XrXjkjhxrywElg3DEw4dh5BIyHf9R4oYYy8KTHvugzmfpHZyi2oYoccBioOQemHDvPgEnL2sihhmXgXte9ARvAgENnrYUzlCihiqyetU39BTAT0znSwjltWxw11FAC7rTjA9hy7HwHNvV81Ja4oYoMsAt8B3yunVfAbLsCF6GGBeCmi85PYPuvLYLLUMUQsAN8dcnZBK6B+d+D5Iv4+NPK+PBnLyX98pv1YUJcTvoSJefDorGc9GV8Pukbq5QPW91C0psPaR/aQUVfGnR1X1qmDR+a2FUfbitUfLnRIwiCIAh0wA88aEJ0pvLEjwAAAABJRU5ErkJggg=="></button>
+                </div>
+                <div class="player-progress">
+                    <progress id="player-progress-bar" value="0" max="1"></progress>
+                </div>
+                <div class="player-time">
+                    <span class="player-time-current">0:00</span>
+                    <span class="player-time-total">0:00</span>
+                </div>
+                
+            </div>
     </div>
 
-        <div class="ms95DesktopIcons">
-            <div class="ms95DesktopIcon" id="thispc" data-action="open-file-explorer">
-                <img src="assets/icons/thispc.png" alt="This PC" class="ms95DesktopIconImage">
-                <p class="ms95DesktopIconText">My Computer</p>
-            </div>
-            <div class="ms95DesktopIcon" id="recyclebin" data-action="open-recycle-bin">
-                <img src="assets/icons/recyclefull.png" alt="Recycle Bin" class="ms95DesktopIconImage">
-                <p class="ms95DesktopIconText">Recycle Bin</p>
-            </div>
-            <div class="ms95DesktopIcon" id="internetexplorer" data-action="open-internet-explorer">
-                <img src="assets/icons/earthconnections.ico" alt="Internet Explorer" class="ms95DesktopIconImage">
-                <p class="ms95DesktopIconText">Internet Explorer</p>
-            </div>
-            <div class="ms95DesktopIcon" id="wordpad-doc" data-action="open-wordpad-doc">
-                <img src="assets/icons/wordpaddoc.ico" alt="WordPad" class="ms95DesktopIconImage">
-                <p class="ms95DesktopIconText">Letter.txt</p>
-            </div>
-            <div class="ms95DesktopIcon" id="defrag" data-action="open-defrag">
-                <img src="assets/icons/defrag.png" alt="Notepad" class="ms95DesktopIconImage">
-                <p class="ms95DesktopIconText">Defragment Drives</p>
+    <div class="ms95DesktopIcons">
+        <div class="ms95DesktopIcon" id="thispc" data-action="open-file-explorer">
+            <img src="assets/icons/thispc.png" alt="This PC" class="ms95DesktopIconImage">
+            <p class="ms95DesktopIconText">My Computer</p>
+        </div>
+        <div class="ms95DesktopIcon" id="recyclebin" data-action="open-recycle-bin">
+            <img src="assets/icons/recyclefull.png" alt="Recycle Bin" class="ms95DesktopIconImage">
+            <p class="ms95DesktopIconText">Recycle Bin</p>
+        </div>
+        <div class="ms95DesktopIcon" id="internetexplorer" data-action="open-internet-explorer">
+            <img src="assets/icons/earthconnections.ico" alt="Internet Explorer" class="ms95DesktopIconImage">
+            <p class="ms95DesktopIconText">Internet Explorer</p>
+        </div>
+        <div class="ms95DesktopIcon" id="wordpad-doc" data-action="open-wordpad-doc">
+            <img src="assets/icons/wordpaddoc.ico" alt="WordPad" class="ms95DesktopIconImage">
+            <p class="ms95DesktopIconText">Letter.txt</p>
+        </div>
+        <div class="ms95DesktopIcon" id="defrag" data-action="open-defrag">
+            <img src="assets/icons/defrag.png" alt="Notepad" class="ms95DesktopIconImage">
+            <p class="ms95DesktopIconText">Defragment Drives</p>
         </div>
 
         <div class="ms95FileExplorerWindow draggable-element" data-draggable="true">
@@ -96,10 +134,14 @@
                     <img src="assets/icons/wordpaddoc.ico" alt="This PC" class="ms95FileExplorerWindowContentItemImage">
                     <p class="ms95FileExplorerWindowContentItemText">Letter.txt</p>
                 </div>
+                <div class="ms95FileExplorerWindowContentItem" id="explorer-mp3">
+                    <img src="assets/icons/cd.png" alt="CD" class="ms95FileExplorerWindowContentItemImage">
+                    <p class="ms95FileExplorerWindowContentItemText">The Art of Dying.mp3</p>
+                </div>
             </div>
 
 
-            <div class="ms95FileExplorerWindowFooter">1 object(s)</div>
+            <div class="ms95FileExplorerWindowFooter">2 object(s)</div>
 
         </div>
 
@@ -180,6 +222,8 @@
         <p class="ms95TaskbarTime">12:00 AM</p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/player.js"></script>
     <script src="assets/js/wordpad.js"></script>
     <script src="assets/js/app.js"></script>
 </body>

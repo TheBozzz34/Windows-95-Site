@@ -56,7 +56,8 @@ body {
 .ms95TaskbarTime {
     color: black;
     font-size: 12px;
-    margin-left: auto; /* Pushes the time to the right */
+    margin-left: auto;
+    /* Pushes the time to the right */
     margin-right: 10px;
 }
 
@@ -365,6 +366,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
 
 }
 
@@ -520,7 +522,8 @@ body {
 
 .ms95TaskbarIcon {
     display: none;
-    flex-flow: row nowrap; /* Changed to row */
+    flex-flow: row nowrap;
+    /* Changed to row */
     justify-content: center;
     align-items: center;
     padding: 0 4px;
@@ -536,7 +539,8 @@ body {
 .ms95TaskbarIconImage {
     width: 24px;
     height: 24px;
-    margin-right: 4px; /* Added margin to separate image and text */
+    margin-right: 4px;
+    /* Added margin to separate image and text */
 }
 
 .ms95TaskbarIconText {
@@ -587,8 +591,10 @@ body {
 }
 
 .ms95FileExplorerWindowContentItem {
-    display: flex; /* Make the content items flex containers */
-    align-items: center; /* Center content vertically within the div */
+    display: flex;
+    /* Make the content items flex containers */
+    align-items: center;
+    /* Center content vertically within the div */
     background-color: #c2c6ca;
     box-shadow: inset 0 0 0 1px #85898d, inset 0 0 0 1px white;
     margin-right: auto;
@@ -605,9 +611,158 @@ body {
 
 
 .ms95FileExplorerWindowContentItemImage {
-    margin-right: 8px; /* Add some spacing between the image and text */
+    margin-right: 8px;
+    /* Add some spacing between the image and text */
+    width: 24px;
+
 }
 
 .ms95FileExplorerWindowContentItemText {
-    margin: 0; /* Remove default margins on the paragraph */
+    margin: 0;
+    /* Remove default margins on the paragraph */
+}
+
+
+.player {
+    background-color: #c0c0c0;
+    color: black;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 200px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+}
+
+.player:active {
+    cursor: grab;
+}
+
+.player-titlebar {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    padding: 5px 0;
+    /* Adjusted padding */
+    display: flex;
+    justify-content: flex-end;
+    /* To align buttons to the right */
+    user-select: none;
+}
+
+.player-title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    flex-grow: 1;
+    /* Allow text to take available space */
+}
+
+.player-buttons {
+    display: flex;
+}
+
+.player-buttons button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.player-buttons button:hover {
+    background-color: #ff0000;
+}
+
+.player-content {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 40px);
+}
+
+.player-text {
+    background-color: white;
+    margin: 0;
+    white-space: pre-wrap;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player-controls-prev img,
+.player-controls-next img,
+.player-controls-play img,
+.player-controls-pause img {
+    width: 20px;
+    height: 20px;
+}
+
+.player-cover-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.player-info-title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.player-info-artist {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-info-album {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+progress {
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    width: 100%;
+}
+progress::-webkit-progress-value {
+    width: 100%;
+}
+
+progress::-moz-progress-bar {
+    width: 100%;
 }
