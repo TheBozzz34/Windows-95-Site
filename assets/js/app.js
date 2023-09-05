@@ -53,6 +53,7 @@ ms95TaskbarIconComputer.addEventListener("click", () => {
 
 ms95FileExplorerWindowHeaderCloseButton.addEventListener("click", () => {
     ms95FileExplorerWindow.style.display = "none";
+    ms95TaskbarIconComputer.style.display = "none";
 });
 
 ms95FileExplorerWindowHeaderMaximizeButton.addEventListener("click", () => {
