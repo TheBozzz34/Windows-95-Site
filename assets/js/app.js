@@ -20,6 +20,7 @@ const bsodOverlay = document.querySelector(".bsod-overlay");
 const ms95FileExplorerWindowContentLetter = document.querySelector("#explorer-doc");
 const ms95TaskbarIconComputer = document.querySelector("#com");
 
+
 document.addEventListener("keypress", function onEvent(event) {
     bsodOverlay.style.display = "none";
 });
@@ -51,6 +52,7 @@ ms95TaskbarIconComputer.addEventListener("click", () => {
 
 ms95FileExplorerWindowHeaderCloseButton.addEventListener("click", () => {
     ms95FileExplorerWindow.style.display = "none";
+    ms95TaskbarIconComputer.style.display = "none";
 });
 
 ms95FileExplorerWindowHeaderMaximizeButton.addEventListener("click", () => {
