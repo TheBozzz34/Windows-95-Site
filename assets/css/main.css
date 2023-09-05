@@ -1,0 +1,613 @@
+@font-face {
+    font-family: msSans;
+    src: url("/assets/css/ms-sans-serif-1.ttf");
+}
+
+body {
+    font-family: msSans;
+    background-image: url("/assets/css/nE0IPhf.jpg");
+    user-select: none;
+}
+
+.ms95Taskbar {
+    background-color: #c0c0c0;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 999;
+    border-top: 3px solid white;
+}
+
+.ms95Taskbar .ms95StartButton {
+    background-color: #c0c0c0;
+    color: black;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ms95Taskbar .ms95StartButton:active {
+    background-color: #808080;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.start-icon {
+    vertical-align: middle;
+    /* Align the image vertically with the text */
+    margin-left: 5px;
+    /* Adjust the spacing between the text and the icon */
+}
+
+.ms95TaskbarTime {
+    color: black;
+    font-size: 12px;
+    margin-left: auto; /* Pushes the time to the right */
+    margin-right: 10px;
+}
+
+.ms95Desktop {
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 1;
+    border-bottom: 3px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.ms95DesktopIcon {
+    width: 100px;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ms95DesktopIcon img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.ms95DesktopIcon p.ms95DesktopIconText {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.ms95DesktopIcon.selected {
+    background-color: blue;
+    opacity: 0.5;
+    /* Adjust the opacity as needed */
+    z-index: 2;
+}
+
+.ms95FileExplorerWindow {
+    background-color: #c0c0c0;
+    color: black;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 300px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    display: none;
+}
+
+.ms95FileExplorerWindow .ms95FileExplorerWindowHeader {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    padding: 3px 0;
+    /* Adjusted padding */
+    display: flex;
+    justify-content: flex-end;
+    /* To align buttons to the right */
+    user-select: none;
+}
+
+.ms95FileExplorerWindow .ms95FileExplorerWindowHeader p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    margin-right: 10px;
+    /* Add spacing between buttons */
+}
+
+.ms95FileExplorerWindow .ms95FileExplorerWindowHeader .ms95FileExplorerWindowHeaderClose {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ms95FileExplorerWindow .ms95FileExplorerWindowHeader .ms95FileExplorerWindowHeaderClose:active {
+    background-color: #808080;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.ms95FileExplorerWindow .ms95FileExplorerWindowHeader .ms95FileExplorerWindowHeaderText {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    flex-grow: 1;
+    /* Allow text to take available space */
+}
+
+
+.wordpad {
+    background-color: #c0c0c0;
+    color: black;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 300px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    display: none;
+}
+
+.wordpad-titlebar {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    padding: 5px 0;
+    /* Adjusted padding */
+    display: flex;
+    justify-content: flex-end;
+    /* To align buttons to the right */
+    user-select: none;
+}
+
+.wordpad-title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    flex-grow: 1;
+    /* Allow text to take available space */
+}
+
+.wordpad-buttons {
+    display: flex;
+}
+
+.wordpad-buttons button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.wordpad-buttons button:hover {
+    background-color: #ff0000;
+}
+
+.wordpad-content {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 40px);
+}
+
+.wordpad-text {
+    background-color: white;
+    margin: 0;
+    white-space: pre-wrap;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.maximized {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Windows 95 Start Menu */
+.ms95Start {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    border: 1px solid black;
+    border-top: 3px solid white;
+    display: none;
+}
+
+.ms95StartHeader {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    background-color: #c0c0c0;
+}
+
+.ms95StartHeaderIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.ms95StartHeaderText {
+    color: black;
+    font-size: 12px;
+}
+
+/* Windows 95 Start Menu */
+.ms95StartMenu {
+    background-color: #c0c0c0;
+    /* Windows 95 Start Menu color */
+}
+
+.ms95StartMenuHeader {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.ms95StartMenuHeaderIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.ms95StartMenuHeaderText {
+    color: white;
+    font-size: 12px;
+}
+
+.ms95StartMenuItems {
+    background-color: #c0c0c0;
+}
+
+.ms95StartMenuItem {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ms95StartMenuItem:hover {
+    background-color: #008080;
+    /* Hover background color */
+}
+
+.ms95StartMenuItemIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.ms95StartMenuItemText {
+    font-size: 12px;
+}
+
+.draggable {
+    z-index: 2;
+    /* Set a higher z-index value for the active window */
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.ms95LoadingOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #c0c0c0;
+    background-image: url("/assets/images/loading.gif");
+    background-repeat: no-repeat;
+    z-index: 9999;
+    background-position: center;
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.bsod-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0000AA;
+    background-image: url("/assets/images/Windows_9X_BSOD.png");
+    background-repeat: no-repeat;
+    z-index: 9999;
+    background-position: center;
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.win98popup {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #c2c6ca;
+    font-size: 12px;
+    -webkit-font-smoothing: none;
+    width: 265px;
+    height: 118px;
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
+    user-select: none;
+}
+
+.win98popup button {
+    background: #c2c6ca;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    outline: none;
+}
+
+.win98popup .shadow {
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px white, inset -1px -1px #85898d;
+}
+
+.win98popup .bar {
+    display: flex;
+    flex-flow: row nowrap;
+    font-weight: bold;
+    justify-content: space-between;
+    width: calc(100% - 11px);
+    height: 13px;
+    color: white;
+    background: #00a;
+    padding: 2px 3px 3px;
+    margin: 3px 2px 1px 3px;
+}
+
+.win98popup .bar p {
+    margin: 0;
+}
+
+.win98popup .bar button {
+    width: 15px;
+    height: 13px;
+}
+
+.win98popup .bar button:active {
+    box-shadow: 0.5px 0.5px 0 0.5px white, inset 1px 1px black, inset -1px -1px #c2c6ca, inset 2px 2px #85898d;
+}
+
+.win98popup .bar button:active svg {
+    transform: translateX(1px) translateY(1px);
+}
+
+.win98popup .bar button svg {
+    margin: 3px 3px 3px 4px;
+}
+
+.win98popup .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1px 15px 14px 14px;
+}
+
+.win98popup .buttons button {
+    width: 74px;
+    height: 22px;
+    display: grid;
+}
+
+.win98popup .buttons button:not(:last-child) {
+    margin-right: 7px;
+}
+
+.win98popup .buttons button p {
+    font-size: 12px;
+    margin: auto;
+}
+
+.win98popup .buttons button img {
+    margin: 4px 3px 3px 4px;
+    display: none;
+}
+
+.win98popup .buttons button p,
+.win98popup .buttons button img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.win98popup .buttons button:focus {
+    outline: none;
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px black, inset 2px 2px white, inset -2px -2px #85898d;
+}
+
+.win98popup .buttons button:focus img {
+    display: block;
+}
+
+.win98popup .buttons button:active {
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px #85898d, inset 2px 2px #85898d;
+    outline: none;
+}
+
+.win98popup .buttons button:active p,
+.win98popup .buttons button:active img {
+    transform: translateX(1px) translateY(1px);
+}
+
+.ms95Taskbar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.ms95TaskbarIcons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+    padding: 0 4px;
+}
+
+.ms95TaskbarIcon {
+    display: none;
+    flex-flow: row nowrap; /* Changed to row */
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ms95TaskbarIcon:hover {
+    transform: scale(1.1);
+}
+
+
+.ms95TaskbarIconImage {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px; /* Added margin to separate image and text */
+}
+
+.ms95TaskbarIconText {
+    font-size: 12px;
+}
+
+.ms95StartButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.minimized {
+    display: none !important;
+}
+
+.ms95FileExplorerWindowFooter {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4px;
+    height: 24px;
+    background-color: #c2c6ca;
+    box-shadow: inset 1px 1px #85898d, inset -1px -1px white;
+}
+
+.ms95FileExplorerWindowContent {
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 4px;
+    background-color: #c2c6ca;
+    box-shadow: inset 1px 1px #85898d, inset -1px -1px white;
+    height: calc(100% - 55px);
+    margin-top: 3px;
+}
+
+.ms95FileExplorerWindowContentItem {
+    display: flex; /* Make the content items flex containers */
+    align-items: center; /* Center content vertically within the div */
+    background-color: #c2c6ca;
+    box-shadow: inset 0 0 0 1px #85898d, inset 0 0 0 1px white;
+    margin-right: auto;
+    padding-left: 4px;
+    padding-right: .75rem;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+
+
+.ms95FileExplorerWindowContentItemImage {
+    margin-right: 8px; /* Add some spacing between the image and text */
+}
+
+.ms95FileExplorerWindowContentItemText {
+    margin: 0; /* Remove default margins on the paragraph */
+}

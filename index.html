@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="icon" href="assets/icons/earthconnections.ico" type="image/x-icon">
+    <meta content="An browser based Windows 95 style website" property="og:title">
+    <meta content="win.necrozma.xyz is a website styled with the clasic windows 95 theme, it is built with only vanilla js, css, and html. No dependencies or external resources are used." property="og:description">
+    <meta content="win.necrozma.xyz" property="og:site_name">
+    <meta content='https://www.techspot.com/images2/news/bigimage/2018/08/2018-08-23-image-20.jpg' property='og:image'>
+</head>
+
+<body>
+
+
+    <div class="ms95LoadingOverlay"></div>
+    <div class="bsod-overlay"></div>
+
+
+    <div class="ms95Desktop">
+
+        <div class="popup-container">
+        <div class="win98popup shadow draggable-element" data-draggable="true">
+            <div class="bar">
+                <p>System message</p>
+                <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="7px" viewBox="0 0 8 7" fill-rule="evenodd" 
+                        stroke-linejoin="round" stroke-miterlimit="2">
+                        <path
+                            d="M1 6V5h1V4h1V3h2v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1zm0-4V1H0V0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H2V2H1z" />
+                    </svg>
+                </button>
+            </div>
+            <section>
+                <p>This page is under contruction</p>
+                <p>View Letter.txt for more info.</p>
+            </section>
+            <div class="buttons">
+                <!--
+                <button class="shadow"><img
+                        src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
+                        width="66.9" height="15">
+                    <p><u>Y</u>es</p>
+                </button>
+                <button class="shadow"><img
+                        src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
+                        width="66.9" height="15">
+                    <p><u>N</u>o</p>
+                </button>
+            -->
+                <button class="shadow" onclick="document.querySelector('.win98popup').style.display = 'none';"><img
+                        src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt=""
+                        width="66.9" height="15"
+                        >
+                    <p>OK</p>
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <div class="ms95DesktopIcons">
+            <div class="ms95DesktopIcon" id="thispc" data-action="open-file-explorer">
+                <img src="assets/icons/thispc.png" alt="This PC" class="ms95DesktopIconImage">
+                <p class="ms95DesktopIconText">My Computer</p>
+            </div>
+            <div class="ms95DesktopIcon" id="recyclebin" data-action="open-recycle-bin">
+                <img src="assets/icons/recyclefull.png" alt="Recycle Bin" class="ms95DesktopIconImage">
+                <p class="ms95DesktopIconText">Recycle Bin</p>
+            </div>
+            <div class="ms95DesktopIcon" id="internetexplorer" data-action="open-internet-explorer">
+                <img src="assets/icons/earthconnections.ico" alt="Internet Explorer" class="ms95DesktopIconImage">
+                <p class="ms95DesktopIconText">Internet Explorer</p>
+            </div>
+            <div class="ms95DesktopIcon" id="wordpad-doc" data-action="open-wordpad-doc">
+                <img src="assets/icons/wordpaddoc.ico" alt="WordPad" class="ms95DesktopIconImage">
+                <p class="ms95DesktopIconText">Letter.txt</p>
+            </div>
+            <div class="ms95DesktopIcon" id="defrag" data-action="open-defrag">
+                <img src="assets/icons/defrag.png" alt="Notepad" class="ms95DesktopIconImage">
+                <p class="ms95DesktopIconText">Defragment Drives</p>
+        </div>
+
+        <div class="ms95FileExplorerWindow draggable-element" data-draggable="true">
+            <div class="ms95FileExplorerWindowHeader">
+                <p class="ms95FileExplorerWindowHeaderText">Ms_dos_5 (C:)</p>
+                <p class="ms95FileExplorerWindowHeaderMinimize" data-action="minimize-file-explorer">-</p>
+                <p class="ms95FileExplorerWindowHeaderMaximize" data-action="maximize-file-explorer">&#9633;</p>
+                <p class="ms95FileExplorerWindowHeaderClose" data-action="close-file-explorer">X</p>
+            </div>
+
+            <div class="ms95FileExplorerWindowContent">
+                <div class="ms95FileExplorerWindowContentItem" id="explorer-doc">
+                    <img src="assets/icons/wordpaddoc.ico" alt="This PC" class="ms95FileExplorerWindowContentItemImage">
+                    <p class="ms95FileExplorerWindowContentItemText">Letter.txt</p>
+                </div>
+            </div>
+
+
+            <div class="ms95FileExplorerWindowFooter">1 object(s)</div>
+
+        </div>
+
+        <div class="wordpad draggable-element" data-draggable="true">
+            <div class="wordpad-titlebar">
+                <span class="wordpad-title">Letter.txt | WordPad</span>
+                <div class="wordpad-buttons">
+                    <button class="wordpad-minimize">_</button>
+                    <button class="wordpad-maximize">&#9633;</button>
+                    <button class="wordpad-close">X</button>
+                </div>
+            </div>
+            <div class="wordpad-content">
+                <pre class="wordpad-text">
+                    This site is currently under construction. 
+                    Please check back later. 
+
+                    - The Management
+                </pre>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="ms95Start">
+        <div class="ms95StartHeader">
+            <img src="assets/icons/start.png" alt="Start" class="ms95StartHeaderIcon">
+            <p class="ms95StartHeaderText">Start</p>
+        </div>
+        <div class="ms95StartMenu">
+            <div class="ms95StartMenuItems">
+                <div class="ms95StartMenuItem" data-action="open-file-explorer">
+                    <img src="assets/icons/thispc.png" alt="This PC" class="ms95StartMenuItemIcon">
+                    <p class="ms95StartMenuItemText">My Computer</p>
+                </div>
+                <div class="ms95StartMenuItem" data-action="open-recycle-bin">
+                    <img src="assets/icons/recyclefull.png" alt="Recycle Bin" class="ms95StartMenuItemIcon">
+                    <p class="ms95StartMenuItemText">Recycle Bin</p>
+                </div>
+                <div class="ms95StartMenuItem" data-action="open-internet-explorer">
+                    <img src="assets/icons/earthconnections.ico" alt="Internet Explorer" class="ms95StartMenuItemIcon">
+                    <p class="ms95StartMenuItemText">Internet Explorer</p>
+                </div>
+                <div class="ms95StartMenuItem" data-action="open-wordpad-doc">
+                    <img src="assets/icons/wordpaddoc.ico" alt="WordPad" class="ms95StartMenuItemIcon">
+                    <p class="ms95StartMenuItemText">Letter.txt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ms95Taskbar">
+
+        <button class="ms95StartButton">
+            Start <img src="assets/icons/start.png" alt="Start" class="start-icon">
+        </button>
+
+        <div class="ms95TaskbarIcons">
+            <div class="ms95TaskbarIcon" data-action="open-file-explorer" id="com">
+                <img src="assets/icons/thispc.png" alt="This PC" class="ms95TaskbarIconImage">
+                <p class="ms95TaskbarIconText">My Computer</p>
+            </div>
+            <div class="ms95TaskbarIcon" data-action="open-recycle-bin" id="bin">
+                <img src="assets/icons/recyclefull.png" alt="Recycle Bin" class="ms95TaskbarIconImage">
+                <p class="ms95TaskbarIconText">Recycle Bin</p>
+            </div>
+            <div class="ms95TaskbarIcon" data-action="open-internet-explorer" id="exp">
+                <img src="assets/icons/earthconnections.ico" alt="Internet Explorer" class="ms95TaskbarIconImage">
+                <p class="ms95TaskbarIconText">Internet Explorer</p>
+            </div>
+            <div class="ms95TaskbarIcon" data-action="open-wordpad-doc" id="doc">
+                <img src="assets/icons/wordpaddoc.ico" alt="WordPad" class="ms95TaskbarIconImage">
+                <p class="ms95TaskbarIconText">Letter.txt</p>
+            </div>
+        </div>
+
+        <p class="ms95TaskbarTime">12:00 AM</p>
+    </div>
+
+    <script src="assets/js/wordpad.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
